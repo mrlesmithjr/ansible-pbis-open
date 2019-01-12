@@ -4,12 +4,16 @@
     url: "{{ pbis_open_debian_repo_key }}"
     state: present
   become: true
+  register: result
+  until: result is successful
 
 - name: debian | Adding PBIS Open Repo
   apt_repository:
     repo: "{{ pbis_open_debian_repo }}"
     state: present
   become: true
+  register: result
+  until: result is successful
 
 - name: debian | Installing PBIS Open
   apt:
