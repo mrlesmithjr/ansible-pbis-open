@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-pbis-open
+pbis_open_debian_repo: deb https://repo.pbis.beyondtrust.com/apt pbiso main
+pbis_open_debian_repo_url: http://repo.pbis.beyondtrust.com/apt
+pbis_open_debian_repo_key: "{{ pbis_open_debian_repo_url + '/RPM-GPG-KEY-pbis' }}"

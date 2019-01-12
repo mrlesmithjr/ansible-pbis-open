@@ -1,0 +1,20 @@
+---
+- name: debian | Adding PBIS Open Repo Key
+  apt_key:
+    url: "{{ pbis_open_debian_repo_key }}"
+    state: present
+  become: true
+
+- name: debian | Adding PBIS Open Repo
+  apt_repository:
+    repo: "{{ pbis_open_debian_repo }}"
+    state: present
+  become: true
+
+- name: debian | Installing PBIS Open
+  apt:
+    name: ["pbis-open"]
+    state: present
+  become: true
+  register: result
+  until: result is successful

@@ -1,0 +1,5 @@
+---
+# tasks file for ansible-pbis-open
+- include_tasks: debian.yml
+  when: ansible_os_family == "Debian"
+# TODO: Add RHEL support
