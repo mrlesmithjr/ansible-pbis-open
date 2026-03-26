@@ -1,4 +1,7 @@
-# ansible-pbis-open
+> [!CAUTION]
+> **This project is archived and no longer maintained.**
+> Archived: 2026-03-26
+> Reason: Low community usage; no longer maintained# ansible-pbis-open
 
 An [Ansible](https://www.ansible.com) role to install [PowerBroker Identity Services Open Edition](https://github.com/BeyondTrust/pbis-open/wiki)
 
